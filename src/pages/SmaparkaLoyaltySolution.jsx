@@ -83,21 +83,21 @@
 // export default SmaparkaLoyaltySolution;
 
 import { useCallback } from "react";
-import Header from "../components/header";
-import LoyaltyHero from "../components/loyalty-hero";
-import LoyaltyWhy from "../components/loyalty-why";
-import LoyaltyReasons from "../components/loyalty-reasons";
-import With1 from "../components/with1";
-import With from "../components/with";
-import Footer from "../components/footer";
-import LoyaltyHeroo from "../components/loyalty-heroo";
-import Whyloyalty from "../components/whyloyalty";
-import HowItWorks from "../components/how-it-works";
+import Header from "../components/Header";
+import LoyaltyHero from "../components/LoyaltyHero";
+import LoyaltyWhy from "../components/LoyaltyWhy";
+import LoyaltyReasons from "../components/LoyaltyReasons";
+import With1 from "../components/With1";
+import With from "../components/With";
+import Footer from "../components/Footer";
+import LoyaltyHeroo from "../components/LoyaltyHeroo";
+import Whyloyalty from "../components/WhyLoyalty";
+import HowItWorks from "../components/HowItWorks";
 // import StoreDescription from "../components/StoreDescription";
 // import Reservation from "../components/Reservation";
 import BusinessSoftware from "../components/BusinessSoftware";
 
-import styles from "./smaparka-loyalty-solution.module.css";
+import styles from "./SmaparkaLoyaltySolution.module.css";
 import DataSecurity from "../components/DataSecurity";
 
 const SmaparkaLoyaltySolution = () => {

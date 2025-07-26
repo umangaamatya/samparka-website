@@ -1,13 +1,13 @@
 import { useState, useCallback } from "react";
-import PortalPopup from "./portal-popup";
+import PortalPopup from "./PortalPopup";
 import PropTypes from "prop-types";
-import styles from "./hero-business-card.module.css";
-import { useRouter } from "next/router";
+import styles from "./HeroBusinessCard.module.css";
+import { useNavigate } from "react-router-dom";
 
 
 const HeroBusinessCard = ({ className = "" }) => {
   const [isVideoPopupOpen, setVideoPopupOpen] = useState(false);
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const openVideoPopup = useCallback(() => {
     setVideoPopupOpen(true);
@@ -19,8 +19,8 @@ const HeroBusinessCard = ({ className = "" }) => {
 
 
   const onGroupContainerClick = useCallback(() => {
-    router.push("/get-in-touch");
-  }, [router]);
+    navigate("/get-in-touch");
+  }, [navigate]);
 
 
   return (

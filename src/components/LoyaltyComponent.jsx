@@ -1,15 +1,15 @@
 import { useCallback } from "react";
 import PropTypes from "prop-types";
-import styles from "./loyalty-component.module.css";
-import { useRouter } from "next/router";
+import styles from "./LoyaltyComponent.module.css";
+import { useNavigate } from "react-router-dom";
 
 const LoyaltyComponent = ({ className = "" }) => {
  
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const onCheckOutSmaparkasClick = useCallback(() => {
-    router.push("/smaparka-loyalty-solution");
-  }, [router]);
+    navigate("/smaparka-loyalty-solution");
+  }, [navigate]);
 
   const onGroupButtonClick = useCallback(() => {
     window.open("https://wa.me/9779766387030");

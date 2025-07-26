@@ -1,16 +1,16 @@
 import { useCallback } from "react";
-import Header from "../components";
-import HeroSection from "../components/hero-section";
-import Trust from "../components/trust";
-import Products from "../components/products";
-import RecommendationMobile from "../components/recommendation-mobile";
-import Footer from "../components";
-import styles from "./index.module.css";
-import { useRouter } from "next/router";
+import Header from "../components/Header";
+import HeroSection from "../components/HeroSection";
+import Trust from "../components/Trust";
+import Products from "../components/Products";
+import RecommendationMobile from "../components/RecommendationMobile";
+import Footer from "../components/Footer";
+import styles from "./Home.module.css";
+import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const onHomeTextClick = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='heroSection']");
     if (anchor) {
@@ -18,16 +18,16 @@ const Home = () => {
     }
   }, []);
   const onFrameLinkClick = useCallback(() => {
-    router.push("/enhance-customer-loyalty-with");
-  }, [router]);
+    navigate("/enhance-customer-loyalty-with");
+  }, [navigate]);
 
   const onFrameLinkClick1 = useCallback(() => {
-    router.push("/boost-your-business-with-n-f-c-e ");
-  }, [router]);
+    navigate("/boost-your-business-with-n-f-c-e ");
+  }, [navigate]);
 
   const onFrameLinkClick2 = useCallback(() => {
-    router.push("/upgrade-your-networking-with-s");
-  }, [router]);
+    navigate("/upgrade-your-networking-with-s");
+  }, [navigate]);
 
 
   return (

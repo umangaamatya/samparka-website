@@ -1,6 +1,6 @@
-import FrameComponent from "./frame-component";
+import FrameComponent from "./FrameComponent";
 import PropTypes from "prop-types";
-import styles from "./with.module.css";
+import styles from "./With.module.css";
 
 const With = ({ className = "" }) => {
   return (

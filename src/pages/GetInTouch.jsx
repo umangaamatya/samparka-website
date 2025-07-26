@@ -1,8 +1,8 @@
 import { useCallback } from "react";
-import Header from "../components/header";
-import ShareYourTravelsForm from "../components/share-your-travels-form";
-import Footer from "../components/footer";
-import styles from "./get-in-touch.module.css";
+import Header from "../components/Header";
+import ShareYourTravelsForm from "../components/ShareYourTravelsForm";
+import Footer from "../components/Footer";
+import styles from "./GetInTouch.module.css";
 
 const GetInTouch = () => {
   const onHomeTextClick = useCallback(() => {

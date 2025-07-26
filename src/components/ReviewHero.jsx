@@ -1,13 +1,13 @@
 import { useState, useCallback } from "react";
-import FilterReview from "./filter-review";
-import PortalPopup from "./portal-popup";
-import { useRouter } from "next/router";
+import FilterReview from "./FilterReview";
+import PortalPopup from "./PortalPopup";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "./review-hero.module.css";
+import styles from "./ReviewHero.module.css";
 
 const ReviewHero = ({ className = "" }) => {
   const [isVideoPopupOpen, setVideoPopupOpen] = useState(false);
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const openVideoPopup = useCallback(() => {
     setVideoPopupOpen(true);
@@ -18,8 +18,8 @@ const ReviewHero = ({ className = "" }) => {
   }, []);
 
   const onGroupContainerClick = useCallback(() => {
-    router.push("/get-in-touch");
-  }, [router]);
+    navigate("/get-in-touch");
+  }, [navigate]);
 
   return (
     <>

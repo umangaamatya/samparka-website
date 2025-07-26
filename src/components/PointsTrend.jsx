@@ -1,14 +1,14 @@
 import { useCallback } from "react";
 import PropTypes from "prop-types";
-import styles from "./loyaltySamparka.module.css";
-import { useRouter } from "next/router";
+import styles from "./PointsTrend.module.css";
+import { useNavigate } from "react-router-dom";
 
 const points = ({ className = "" }) => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const onCheckOutSmaparkasClick = useCallback(() => {
-    router.push("/piccolo-coffee-community");
-  }, [router]);
+    navigate("/piccolo-coffee-community");
+  }, [navigate]);
 
   const onGroupButtonClick = useCallback(() => {
     window.open("https://wa.me/9779766387030");

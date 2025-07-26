@@ -1,22 +1,22 @@
 import { useCallback } from "react";
-import { useRouter } from "next/router";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "./products.module.css";
+import styles from "./Products.module.css";
 
 const Products = ({ className = "" }) => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const onViewMoreClick = useCallback(() => {
-    router.push("/smaparka-loyalty-solution");
-  }, [router]);
+    navigate("/smaparka-loyalty-solution");
+  }, [navigate]);
 
   const onViewMoreClick1 = useCallback(() => {
-    router.push("/smart-business-card");
-  }, [router]);
+    navigate("/smart-business-card");
+  }, [navigate]);
 
   const onViewMoreClick2 = useCallback(() => {
-    router.push("/smart-review-stand");
-  }, [router]);
+    navigate("/smart-review-stand");
+  }, [navigate]);
 
   return (
     <div

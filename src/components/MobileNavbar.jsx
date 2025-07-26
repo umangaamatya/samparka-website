@@ -65,36 +65,36 @@
 // export default MobileNavbaR;
 
 import { useCallback, useState } from "react";
-import { useRouter } from "next/router";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "./mobile-navba-r.module.css";
+import styles from "./MobileNavbar.module.css";
 import { IconButton } from "@mui/material";
 import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
 
 const MobileNavbaR = ({ className = "", onClose }) => {
   const [isProductDropdownOpen, setProductDropdownOpen] = useState(false);
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const onHomeTextClick = useCallback(() => {
-    router.push("/");
-  }, [router]);
+    navigate("/");
+  }, [navigate]);
 
   const onBlogTextClick = useCallback(() => {
-    router.push("/blog");
-  }, [router]);
+    navigate("/blog");
+  }, [navigate]);
 
   const onProductClick = useCallback(() => {
     setProductDropdownOpen(!isProductDropdownOpen);
   }, [isProductDropdownOpen]);
 
   const handleProductNavigation = useCallback((path) => {
-    router.push(path);
+    navigate(path);
     setProductDropdownOpen(false);
-  }, [router]);
+  }, [navigate]);
 
   const onContactUsTextClick = useCallback(() => {
-    router.push("/get-in-touch");
-  }, [router]);
+    navigate("/get-in-touch");
+  }, [navigate]);
 
   return (
     <div className={[styles.mobilenavbar, className].join(" ")}>
@@ -151,7 +151,7 @@ const MobileNavbaR = ({ className = "", onClose }) => {
               </div>
               <div
                 className={styles.productDropdownItem}
-                onClick={() => handleProductNavigation('/smaparka-loyalty-solution')}
+                onClick={() => handleProductNavigation('/samparka-loyalty-solution')}
               >
                 Digital Loyalty Solution
               </div>

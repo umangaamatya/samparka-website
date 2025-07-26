@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "./loyalty-reasons.module.css";
+import styles from "./LoyaltyReasons.module.css";
 
 const LoyaltyReasons = ({ className = "" }) => {
   return (

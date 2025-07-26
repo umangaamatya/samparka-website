@@ -1,16 +1,16 @@
 import { useCallback } from "react";
-import Header from "../components/header";
-import { useRouter } from "next/router";
-import Footer from "../components/footer";
-import styles from "./boost-your-business-with-n-f-c-e.module.css";
-import LoyaltySamparka from "../components/loyaltySamparka";
+import Header from "../components/Header";
+import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
+import styles from "./LoyaltyElevated.module.css";
+import LoyaltySamparka from "../components/LoyaltySamparka";
 
 const LoyaltyElevated = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const onFrameButtonClick = useCallback(() => {
-    router.push("/blog");
-  }, [router]);
+    navigate("/blog");
+  }, [navigate]);
 
   const onIntroductionClick = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='frameContainer1']");
@@ -55,16 +55,16 @@ const LoyaltyElevated = () => {
   }, []);
 
   const onFrameLinkClick = useCallback(() => {
-    router.push("/boost-your-business-with-n-f-c-e");
-  }, [router]);
+    navigate("/boost-your-business-with-n-f-c-e");
+  }, [navigate]);
 
   const onFrameLinkClick1 = useCallback(() => {
-    router.push("/enhance-customer-loyalty-with");
-  }, [router]);
+    navigate("/enhance-customer-loyalty-with");
+  }, [navigate]);
 
   const onFrameLinkClick2 = useCallback(() => {
-    router.push("/upgrade-your-networking-with-s");
-  }, [router]);
+    navigate("/upgrade-your-networking-with-s");
+  }, [navigate]);
 
   return (
     <div className={styles.boostYourBusinessWithNfcE}>

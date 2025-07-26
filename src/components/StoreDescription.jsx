@@ -1,14 +1,14 @@
 import { useCallback } from "react";
-import { useRouter } from "next/router";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "./review.module.css";
+import styles from "./StoreDescription.module.css";
 
 const Review = ({ className = "" }) => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const onFrameContainerClick = useCallback(() => {
-    router.push("/get-in-touch");
-  }, [router]);
+    navigate("/get-in-touch");
+  }, [navigate]);
 
   return (
     <div className={[styles.review2, className].join(" ")}>

@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import styles from "./DataSecurity.module.css";
-import Image from "next/image";
 
 export default function DataSecurity({ className = "" }) {
   useEffect(() => {
@@ -37,7 +36,7 @@ export default function DataSecurity({ className = "" }) {
     <div className={[styles.container, className].join(" ")} data-animate-on-scroll>
       <div className={styles.header}>
         <div className={styles.lockImage}>
-          <Image src="/lock-icon.png" alt="Lock icon" width={100} height={100} />
+          <img src="/lock-icon.png" alt="Lock icon" width={100} height={100} />
         </div>
         <div className={styles.textSection}>
           <h2 className={styles.title}>Your Data is Secured</h2>

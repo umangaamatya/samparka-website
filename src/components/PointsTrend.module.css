@@ -1,0 +1,10 @@
+/* PointsTrend component styles */
+.points-trend {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.content {
+  flex: 1;
+}

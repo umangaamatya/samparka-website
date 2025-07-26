@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
-import styles from "./loyalty-heroo.module.css";
-import WithOut from "./with-out";
+import styles from "./LoyaltyHeroo.module.css";
+import WithOut from "./WithOut";
 
 
 const LoyaltyHeroo = ({ className = "" }) => {

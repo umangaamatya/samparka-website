@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
-import styles from "./how-it-works.module.css";
+import styles from "./HowItWorks.module.css";
 
 const HowItWorks = ({ className = "" }) => {
   useEffect(() => {

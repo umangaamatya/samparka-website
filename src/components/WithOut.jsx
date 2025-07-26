@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import PropTypes from "prop-types";
-import styles from "./with-out.module.css";
+import styles from "./WithOut.module.css";
 
 const WithOut = ({
   className = "",

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "./filter-review.module.css";
+import styles from "./FilterReview.module.css";
 
 const FilterReview = ({ className = "", onClose }) => {
   return (

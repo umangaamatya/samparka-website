@@ -1,9 +1,9 @@
 import { useState, useCallback } from "react";
-import PortalPopup from "./portal-popup";
+import PortalPopup from "./PortalPopup";
 
-import { useRouter } from "next/router";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "./loyalty-hero.module.css";
+import styles from "./LoyaltyHero.module.css";
 
 const LoyaltyHero = ({ className = "" }) => {
   const [isVideoPopupOpen, setVideoPopupOpen] = useState(false);
@@ -16,11 +16,11 @@ const LoyaltyHero = ({ className = "" }) => {
   }, []);
 
 
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const onGroupContainerClick = useCallback(() => {
-    router.push("/get-in-touch");
-  }, [router]);
+    navigate("/get-in-touch");
+  }, [navigate]);
 
   return (
     <>

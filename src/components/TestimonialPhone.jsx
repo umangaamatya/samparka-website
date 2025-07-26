@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "./testimonial-phone.module.css";
+import styles from "./TestimonialPhone.module.css";
 
 const TestimonialPhone = ({ className = "", onClose }) => {
   return (

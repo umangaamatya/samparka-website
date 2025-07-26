@@ -1,18 +1,18 @@
 import { useState, useCallback } from "react";
 import { Menu, MenuItem, Button } from "@mui/material";
 import { ArrowDropDown } from "@mui/icons-material";
-import MobileNavbaR from "./mobile-navba-r";
-import PortalPopup from "./portal-popup";
-import { useRouter } from "next/router";
+import MobileNavbaR from "./MobileNavbar";
+import PortalPopup from "./PortalPopup";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 import { IconButton } from "@mui/material";
 
 
 const Header = ({ className = "", onClose, onHomeTextClick }) => {
   const [isMobileNavbaRPopupOpen, setMobileNavbaRPopupOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const openMobileNavbaRPopup = useCallback(() => {
     setMobileNavbaRPopupOpen(true);
@@ -23,12 +23,12 @@ const Header = ({ className = "", onClose, onHomeTextClick }) => {
   }, []);
 
   const onHomeClick = useCallback(() => {
-    router.push("/");
-  }, [router]);
+    navigate("/");
+  }, [navigate]);
 
   const onBlogClick = useCallback(() => {
-    router.push("/blog");
-  }, [router]);
+    navigate("/blog");
+  }, [navigate]);
 
 
   const onProductClick = useCallback((event) => {
@@ -40,13 +40,13 @@ const Header = ({ className = "", onClose, onHomeTextClick }) => {
   }, []);
 
   const handleProductNavigation = useCallback((path) => {
-    router.push(path);
+    navigate(path);
     handleMenuClose();
-  }, [router, handleMenuClose]);
+  }, [navigate, handleMenuClose]);
 
   const onAboutusClick = useCallback(() => {
-    router.push("/get-in-touch");
-  }, [router]);
+    navigate("/get-in-touch");
+  }, [navigate]);
 
   const onHomeTextClick1 = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='heroSection']");
@@ -85,10 +85,9 @@ const Header = ({ className = "", onClose, onHomeTextClick }) => {
                 className={styles.home}
                 data-scroll-to="product"
                 onClick={onProductClick}
+                endIcon={<ArrowDropDown />}
               >
                 PRODUCTS
-
-                
               </Button>
               {/* <IconButton
       
@@ -177,7 +176,7 @@ const Header = ({ className = "", onClose, onHomeTextClick }) => {
           Smart Review Stand
         </MenuItem>
         <MenuItem 
-          onClick={() => handleProductNavigation('/smaparka-loyalty-solution')}
+          onClick={() => handleProductNavigation('/samparka-loyalty-solution')}
           sx={{ fontSize: '13px', fontWeight: '300', color: '#d7d7d7'  }}
         >
           Digital Loyalty Solution

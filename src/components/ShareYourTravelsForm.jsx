@@ -137,7 +137,7 @@
 import React, { useState } from 'react';
 import { TextField, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 import PropTypes from 'prop-types';
-import styles from './share-your-travels-form.module.css';
+import styles from './ShareYourTravelsForm.module.css';
 
 const ShareYourTravelsForm = ({ className = '' }) => {
   const [Name, setName] = useState('');

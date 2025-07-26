@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "./product-visuals-review.module.css";
+import styles from "./ProductVisualsReview.module.css";
 
 const ProductVisualsReview = ({ className = "" }) => {
   return (

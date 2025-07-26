@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "./benefit-two.module.css";
+import styles from "./BenefitTwo.module.css";
 
 const BenefitTwo = ({
   className = "",

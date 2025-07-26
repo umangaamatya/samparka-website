@@ -1,15 +1,15 @@
 import { useCallback } from "react";
 import PropTypes from "prop-types";
-import styles from "./card-component.module.css";
-import { useRouter } from "next/router";
+import styles from "./CardComponent.module.css";
+import { useNavigate } from "react-router-dom";
 
 
 const CardComponent = ({ className = "" }) => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const onCheckOutSmaparkasClick = useCallback(() => {
-    router.push("/smart-business-card");
-  }, [router]);
+    navigate("/smart-business-card");
+  }, [navigate]);
 
   const onGroupButtonClick = useCallback(() => {
     window.open("https://wa.me/9779766387030");

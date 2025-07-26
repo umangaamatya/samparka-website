@@ -1,6 +1,6 @@
-import WithOut from "./with-out";
+import WithOut from "./WithOut";
 import PropTypes from "prop-types";
-import styles from "./loyalty-why.module.css";
+import styles from "./LoyaltyWhy.module.css";
 
 const LoyaltyWhy = ({ className = "" }) => {
   return (

@@ -1,14 +1,14 @@
 import { useCallback, useEffect } from "react";
-import Header from "../components/header";
-import HeroBusinessCard from "../components/hero-business-card";
-import BenefitTwo from "../components/benefit-two";
-import { useRouter } from "next/router";
-import Footer from "../components/footer";
-import styles from "./smart-business-card.module.css";
+import Header from "../components/Header";
+import HeroBusinessCard from "../components/HeroBusinessCard";
+import BenefitTwo from "../components/BenefitTwo";
+import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
+import styles from "./SmartBusinessCard.module.css";
 
 
 const SmartBusinessCard = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
       "[data-animate-on-scroll]"
@@ -40,8 +40,8 @@ const SmartBusinessCard = () => {
   }, []);
 
   const onFrameContainerClick = useCallback(() => {
-    router.push("/get-in-touch");
-  }, [router]);
+    navigate("/get-in-touch");
+  }, [navigate]);
 
   return (
     <div className={styles.smartbusinesscard}>

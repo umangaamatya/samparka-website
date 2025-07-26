@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "./product-video.module.css";
+import styles from "./ProductVideo.module.css";
 
 const ProductVideo = ({ className = "" }) => {
   return (

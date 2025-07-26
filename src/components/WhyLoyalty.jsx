@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
-import styles from "./whyloyalty.module.css";
+import styles from "./WhyLoyalty.module.css";
 
 const WhyLoyalty = ({ className = "" }) => {
   useEffect(() => {

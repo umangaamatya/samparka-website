@@ -1,8 +1,8 @@
 import { useState, useCallback } from "react";
-import TestimonialPhone from "./testimonial-phone";
-import PortalPopup from "./portal-popup";
+import TestimonialPhone from "./TestimonialPhone";
+import PortalPopup from "./PortalPopup";
 import PropTypes from "prop-types";
-import styles from "./recommendation-mobile.module.css";
+import styles from "./RecommendationMobile.module.css";
 
 const RecommendationMobile = ({ className = "", group7791 }) => {
   const [isTestimonialPhonePopupOpen, setTestimonialPhonePopupOpen] =

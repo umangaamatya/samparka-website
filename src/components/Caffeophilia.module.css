@@ -1,0 +1,10 @@
+/* Caffeophilia component styles */
+.caffeophilia {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.content {
+  flex: 1;
+}

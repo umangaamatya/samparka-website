@@ -1,7 +1,7 @@
 import { useMemo, useCallback, useState, useRef, useEffect } from "react";
 
 import { createPortal } from "react-dom";
-import styles from "./portal-popup.module.css";
+import styles from "./PortalPopup.module.css";
 import PropTypes from "prop-types";
 
 const PortalPopup = ({

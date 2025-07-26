@@ -1,4 +1,4 @@
-import FrameComponent from "./frame-component";
+import FrameComponent from "./FrameComponent";
 import PropTypes from "prop-types";
 import styles from "./with1.module.css";
 

@@ -1,7 +1,7 @@
 import { useCallback } from "react";
-import { useRouter } from "next/router";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "./frame-component.module.css";
+import styles from "./FrameComponent.module.css";
 
 const FrameComponent = ({
   className = "",
@@ -9,11 +9,11 @@ const FrameComponent = ({
   forSmallBusinesses,
   nPR1599mo,
 }) => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const onGroupContainerClick = useCallback(() => {
-    router.push("/get-in-touch");
-  }, [router]);
+    navigate("/get-in-touch");
+  }, [navigate]);
 
   return (
     <div className={[styles.smallbizParent, className].join(" ")}>

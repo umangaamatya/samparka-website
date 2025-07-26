@@ -1,11 +1,11 @@
 import { useCallback } from "react";
-import Header from "../components";
-import Footer from "../components";
-import styles from "./index.module.css";
-import { useRouter } from "next/router";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import styles from "./Blog.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const onHomeTextClick = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='heroSection']");
     if (anchor) {
@@ -13,47 +13,47 @@ const Blog = () => {
     }
   }, []);
   const onFrameLinkClick = useCallback(() => {
-    router.push("/enhance-customer-loyalty-with");
-  }, [router]);
+    navigate("/enhance-customer-loyalty-with");
+  }, [navigate]);
 
   const onFrameLinkClick1 = useCallback(() => {
-    router.push("/boost-your-business-with-n-f-c-e ");
-  }, [router]);
+    navigate("/boost-your-business-with-n-f-c-e ");
+  }, [navigate]);
 
   const onFrameLinkClick2 = useCallback(() => {
-    router.push("/upgrade-your-networking-with-s");
-  }, [router]);
+    navigate("/upgrade-your-networking-with-s");
+  }, [navigate]);
 
   const onFrameLinkClick3 = useCallback(() => {
-    router.push("/piccolo-where-coffee-meets-community");
-  }, [router]);
+    navigate("/piccolo-where-coffee-meets-community");
+  }, [navigate]);
 
   const onFrameLinkClick4 = useCallback(() => {
-    router.push("/tsubaki-transforming-beauty-into-empowerment");
-  }, [router]);
+    navigate("/tsubaki-transforming-beauty-into-empowerment");
+  }, [navigate]);
 
   const onFrameLinkClick5 = useCallback(() => {
-    router.push("/ThreadsNTrends-Where-Sneaker-Culture-Finds-Its-Sole");
-  }, [router]);
+    navigate("/ThreadsNTrends-Where-Sneaker-Culture-Finds-Its-Sole");
+  }, [navigate]);
 
   const onFrameLinkClick6 = useCallback(() => {
-    router.push("/TheNewBarber-Crafting-Style-from-the-Ground-Up");
-  }, [router]);
+    navigate("/TheNewBarber-Crafting-Style-from-the-Ground-Up");
+  }, [navigate]);
 
   const onFrameLinkClick7 = useCallback(() => {
-    router.push("/caffeophilia-for-dreamers-with-coffee-in-their");
-  }, [router]);
+    navigate("/caffeophilia-for-dreamers-with-coffee-in-their");
+  }, [navigate]);
 
   const onFrameLinkClick8 = useCallback(() => {
-    router.push("/loyalty-elevated");
-  }, [router]);
+    navigate("/loyalty-elevated");
+  }, [navigate]);
 
   const onFrameLinkClick9 = useCallback(() => {
-    router.push("/mira-bakery");
-  }, [router]);
+    navigate("/mira-bakery");
+  }, [navigate]);
   const onFrameLinkClick10 = useCallback(() => {
-    router.push("/points-economy");
-  }, [router]);
+    navigate("/points-economy");
+  }, [navigate]);
   return (
     <div className={styles.home}>
       <Header onHomeTextClick={onHomeTextClick} />
