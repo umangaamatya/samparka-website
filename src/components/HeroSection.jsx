@@ -1,90 +1,27 @@
-import { useCallback, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import PropTypes from "prop-types";
-import styles from "./HeroSection.module.css";
+import React from 'react';
+import styles from '../pages/Home.module.css'; // Note: uses the main Home page CSS
 
-const HeroSection = ({ className = "" }) => {
-  const navigate = useNavigate();
-  useEffect(() => {
-    const scrollAnimElements = document.querySelectorAll(
-      "[data-animate-on-scroll]"
-    );
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting || entry.intersectionRatio > 0) {
-            const targetElement = entry.target;
-            targetElement.classList.add(styles.animate);
-            observer.unobserve(targetElement);
-          }
-        }
-      },
-      {
-        threshold: 0.15,
-      }
-    );
-
-    for (let i = 0; i < scrollAnimElements.length; i++) {
-      observer.observe(scrollAnimElements[i]);
-    }
-
-    return () => {
-      for (let i = 0; i < scrollAnimElements.length; i++) {
-        observer.unobserve(scrollAnimElements[i]);
-      }
-    };
-  }, []);
-
-  const onButtonClick = useCallback(() => {
-    navigate("/get-in-touch");
-  }, [navigate]);
-
+const HeroSection = () => {
   return (
-    <section
-      className={[styles.herosection, className].join(" ")}
-      id="HeroSection"
-      data-scroll-to="heroSection"
-      data-animate-on-scroll
-    >
-      <div className={styles.herotext}>
-        <div className={styles.herocta}>
-          <div className={styles.newcallout}>
-            <div className={styles.newcalloutChild} />
-            <div className={styles.contactlessElegantInnovati}>
-              Contactless. Elegant. Innovative.
-            </div>
-            <img className={styles.vectorIcon} alt="" src="/vector1.svg" />
-          </div>
-          <div className={styles.title}>
-            Bridging the gap between traditional and the new.
-          </div>
-          
-          {/* Digital NFC Smart Business Cards, Google Review Management, and Loyalty Reward Software in Nepal | Bridging Traditional and Modern Technology */}
-          <div className={styles.subtitle1}>
-          Digital NFC Smart Business Cards | Google Review Management | Loyalty Reward Software in Nepal 
-          </div>
-          
-          <div className={styles.subtitle}>
-            Our products are crafted to elevate your professional image, enhance
-            customer feedback, and strengthen client loyalty, all through
-            cutting-edge technology and intuitive design.
-          </div>
-
-          
-          <div className={styles.buttonrow}>
-            <button className={styles.button} onClick={onButtonClick}>
-              <div className={styles.getInTouch}>Get In Touch</div>
-            </button>
-          </div>
+    <section className={styles.heroSection}>
+      <div className={styles.heroContent}>
+        <div className={styles.heroBadge}>
+          <span>🟢</span>
+          <span>Powerful Digital Solution</span>
         </div>
+        <h1 className={styles.heroTitle}>
+          Bridging the gap between traditional and the new.
+        </h1>
+        <p className={styles.heroDescription}>
+          Our products are crafted to elevate your professional image, enhance customer feedback, and strengthen client loyalty, so you can make a lasting impression and achieve more.
+        </p>
+        <button className={styles.heroButton}>Get in Touch</button>
       </div>
-      <img className={styles.heroimageIcon} alt="Samparka Nepal Hero Page Image Of Smart Business Card, Review Card and Loyalty SOftware" src="/vector@2x.png" />
+      <div className={styles.heroImageContainer}>
+        <img src="https://assets-global.website-files.com/649581331fe3f31a839a8435/649665181b508277a8682855_Group%201171275215%20(1).webp" alt="App on Phones" className={styles.heroImage} />
+      </div>
     </section>
   );
-};
-
-HeroSection.propTypes = {
-  className: PropTypes.string,
 };
 
 export default HeroSection;

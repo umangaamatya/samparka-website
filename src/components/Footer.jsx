@@ -1,6 +1,6 @@
 import { useMemo, useCallback } from "react";
 import PropTypes from "prop-types";
-import styles from "./footer.module.css";
+import styles from "./Footer.module.css";
 
 const Footer = ({ className = "", lETTERLOGO1, propGap }) => {
   

@@ -7,7 +7,8 @@ const BenefitTwo = ({
   worksOnSmartphonesRunning,
 }) => {
   return (
-    <div className={[styles.benefittwo, className].join(" ")}>
+    <div className={[styles.benefittwo, className].join(" ")}
+    style={{ border: '2px solid red', padding: '20px' }}> 
       <img
         className={styles.a19ada006bf9011562397Group44Icon}
         alt=""
